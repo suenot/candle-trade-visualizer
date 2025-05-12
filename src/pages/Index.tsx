@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   getCandlestickPresets, 
   PresetKey, 
@@ -13,25 +13,24 @@ import CandlestickVisualization from '../components/CandlestickVisualization';
 import CandleDataCSV from '../components/CandleDataCSV';
 import TradesDataCSV from '../components/TradesDataCSV';
 import { useIsMobile } from '../hooks/use-mobile';
-import { useTranslation } from '../contexts/LanguageContext';
+import { useTranslation, useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from '../components/LanguageSelector';
 
 const Index = () => {
-  const [selectedPreset, setSelectedPreset] = useState<PresetKey>('bullish');
   const { t } = useTranslation();
-  const CANDLESTICK_PRESETS = getCandlestickPresets(t);
-  const [candle, setCandle] = useState<OHLCV>(CANDLESTICK_PRESETS.bullish.generator());
-  const [trades, setTrades] = useState<Trade[]>([]);
-  const isMobile = useIsMobile();
+  const { language } = useLanguage();
+  const [selectedPreset, setSelectedPreset] = useState<PresetKey>('bullish');
+  const [regenKey, setRegenKey] = useState(0);
 
-  // Generate new candle and trades when preset changes
-  useEffect(() => {
-    const newCandle = CANDLESTICK_PRESETS[selectedPreset].generator();
-    const newTrades = generateTrades(newCandle);
-    
-    setCandle(newCandle);
-    setTrades(newTrades);
-  }, [selectedPreset, CANDLESTICK_PRESETS]);
+  const CANDLESTICK_PRESETS = useMemo(() => getCandlestickPresets(t), [language]);
+
+  const { candle, trades } = useMemo(() => {
+    const candle = CANDLESTICK_PRESETS[selectedPreset].generator();
+    const trades = generateTrades(candle);
+    return { candle, trades };
+  }, [selectedPreset, CANDLESTICK_PRESETS, regenKey]);
+
+  const isMobile = useIsMobile();
 
   // Handle preset selection
   const handleSelectPreset = (preset: PresetKey) => {
@@ -40,11 +39,7 @@ const Index = () => {
 
   // Generate new data with the current preset
   const handleRegenerateData = () => {
-    const newCandle = CANDLESTICK_PRESETS[selectedPreset].generator();
-    const newTrades = generateTrades(newCandle);
-    
-    setCandle(newCandle);
-    setTrades(newTrades);
+    setRegenKey((k) => k + 1);
   };
 
   return (
