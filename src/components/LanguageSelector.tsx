@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Languages } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
@@ -16,7 +15,13 @@ const languages: Record<Language, string> = {
   ru: 'Russian',
   zh: 'Chinese',
   ja: 'Japanese',
-  ko: 'Korean'
+  ko: 'Korean',
+  hi: 'Hindi',
+  es: 'Spanish',
+  de: 'German',
+  fr: 'French',
+  tr: 'Turkish',
+  ar: 'Arabic',
 };
 
 const LanguageSelector = () => {
