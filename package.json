@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "og:build": "sharp -i public/og-image.svg -o public/og-image.png resize 1200 630"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

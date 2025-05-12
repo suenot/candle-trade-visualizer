@@ -25,4 +25,22 @@ Remove all mentions of "Lovable" from the project, update the author to Eugen So
 - package.json
 - vite.config.ts
 - src/pages/Index.tsx or src/App.tsx (for repo link)
-- public/og-image.png (to be created) 
+- public/og-image.png (to be created)
+
+## Automated OG Image Pipeline
+
+- The SVG OG image is stored at `public/og-image.svg`.
+- The PNG OG image for Open Graph is generated at `public/og-image.png`.
+- To update the PNG after editing the SVG, run:
+
+```sh
+npm run og:build
+```
+
+This uses [sharp-cli](https://github.com/lovell/sharp-cli) for reliable, headless conversion:
+
+```json
+"og:build": "sharp -i public/og-image.svg -o public/og-image.png resize 1200 630"
+```
+
+This ensures the OG image is always up-to-date and the process is fully automated for CI/CD and local development. 

@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <text x="50%" y="38%" text-anchor="middle" fill="#fff" font-size="64" font-family="Inter, Arial, sans-serif" font-weight="bold">
+    OHLCV Candlestick Demo
+  </text>
+  <text x="50%" y="52%" text-anchor="middle" fill="#e0e7ef" font-size="38" font-family="Inter, Arial, sans-serif">
+    by Eugen Soloviov (@suenot)
+  </text>
+  <rect x="350" y="380" width="500" height="70" rx="18" fill="#1e293b" opacity="0.85"/>
+  <text x="50%" y="425" text-anchor="middle" fill="#38bdf8" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="bold">
+    github.com/suenot/candle-trade-visualizer
+  </text>
+</svg> 
