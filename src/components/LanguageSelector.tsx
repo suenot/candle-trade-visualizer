@@ -10,12 +10,13 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+// Language names are displayed in English to ensure all users can understand them
 const languages: Record<Language, string> = {
   en: 'English',
-  ru: 'Русский',
-  zh: '中文',
-  ja: '日本語',
-  ko: '한국어'
+  ru: 'Russian',
+  zh: 'Chinese',
+  ja: 'Japanese',
+  ko: 'Korean'
 };
 
 const LanguageSelector = () => {
