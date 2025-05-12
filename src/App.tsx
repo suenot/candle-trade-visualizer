@@ -20,6 +20,11 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <footer className="w-full text-center text-xs text-muted-foreground py-4 mt-8">
+        <a href="https://github.com/suenot/candle-trade-visualizer" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+          GitHub: suenot/candle-trade-visualizer
+        </a>
+      </footer>
     </TooltipProvider>
   </QueryClientProvider>
 );

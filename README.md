@@ -1,8 +1,11 @@
-# Welcome to your Lovable project
+# OHLCV Candlestick Demo
+
+**Author:** Eugen Soloviov ([@suenot](https://github.com/suenot))
+**GitHub Repo:** [https://github.com/suenot/candle-trade-visualizer](https://github.com/suenot/candle-trade-visualizer)
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/dc2d9e4e-f94a-44a0-9935-5dfdc883e371
+**Demo URL:** (add your deployment URL here)
 
 ## How can I edit this code?
 
@@ -16,7 +19,7 @@ Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in your deployment.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -24,10 +27,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/suenot/candle-trade-visualizer.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd candle-trade-visualizer
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -62,12 +65,8 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/dc2d9e4e-f94a-44a0-9935-5dfdc883e371) and click on Share -> Publish.
+Deploy using your preferred platform (Vercel, Netlify, etc.) or your own server.
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
