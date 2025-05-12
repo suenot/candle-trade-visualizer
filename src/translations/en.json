@@ -1,0 +1,16 @@
+
+{
+  "page.title": "OHLCV Candlestick Demo",
+  "page.subtitle": "Learn how candlesticks are formed from individual trades",
+  "presets.title": "Candlestick Presets",
+  "candle.data": "Candlestick Data",
+  "trades.title": "Individual Trades",
+  "trades.description": "These are the 10 individual trades that form the OHLCV candlestick. The first trade is at the open price, and the last trade is at the close price.",
+  "button.regenerate": "Regenerate Data",
+  "accordion.what": "What are Candlesticks?",
+  "accordion.structure": "Candle Structure",
+  "accordion.timeframes": "Timeframes",
+  "accordion.patterns": "Common Candlestick Patterns",
+  "accordion.advanced": "Advanced Concepts",
+  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+}

@@ -1,0 +1,16 @@
+
+{
+  "page.title": "Демо OHLCV свечей",
+  "page.subtitle": "Узнайте, как формируются свечи из отдельных сделок",
+  "presets.title": "Пресеты свечей",
+  "candle.data": "Данные свечи",
+  "trades.title": "Отдельные сделки",
+  "trades.description": "Это 10 отдельных сделок, которые формируют OHLCV свечу. Первая сделка открывается по цене открытия, а последняя - по цене закрытия.",
+  "button.regenerate": "Обновить данные",
+  "accordion.what": "Что такое свечи?",
+  "accordion.structure": "Структура свечи",
+  "accordion.timeframes": "Временные интервалы",
+  "accordion.patterns": "Популярные паттерны свечей",
+  "accordion.advanced": "Продвинутые концепции",
+  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+}

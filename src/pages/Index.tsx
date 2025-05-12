@@ -14,12 +14,15 @@ import CandlestickVisualization from '../components/CandlestickVisualization';
 import CandleDataCSV from '../components/CandleDataCSV';
 import TradesDataCSV from '../components/TradesDataCSV';
 import { useIsMobile } from '../hooks/use-mobile';
+import { useTranslation } from '../contexts/LanguageContext';
+import LanguageSelector from '../components/LanguageSelector';
 
 const Index = () => {
   const [selectedPreset, setSelectedPreset] = useState<PresetKey>('bullish');
   const [candle, setCandle] = useState<OHLCV>(CANDLESTICK_PRESETS.bullish.generator());
   const [trades, setTrades] = useState<Trade[]>([]);
   const isMobile = useIsMobile();
+  const { t } = useTranslation();
 
   // Generate new candle and trades when preset changes
   useEffect(() => {
@@ -46,10 +49,15 @@ const Index = () => {
 
   return (
     <div className="container mx-auto py-6 px-4 max-w-7xl">
-      <h1 className="text-3xl font-bold mb-2">OHLCV Candlestick Demo</h1>
-      <p className="text-lg text-muted-foreground mb-6">
-        Learn how candlesticks are formed from individual trades
-      </p>
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">{t('page.title')}</h1>
+          <p className="text-lg text-muted-foreground">
+            {t('page.subtitle')}
+          </p>
+        </div>
+        <LanguageSelector />
+      </div>
       
       <div className="mb-6">
         <CandlestickPresetSelector 
@@ -79,17 +87,16 @@ const Index = () => {
           <CardContent className="p-6">
             <div className="flex flex-col">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">Individual Trades</h2>
+                <h2 className="text-xl font-bold">{t('trades.title')}</h2>
                 <button 
                   onClick={handleRegenerateData}
                   className="px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm hover:bg-primary/90 transition-colors"
                 >
-                  Regenerate Data
+                  {t('button.regenerate')}
                 </button>
               </div>
               <p className="text-muted-foreground mb-4">
-                These are the 10 individual trades that form the OHLCV candlestick. 
-                The first trade is at the open price, and the last trade is at the close price.
+                {t('trades.description')}
               </p>
               <div className={`${isMobile ? 'overflow-x-auto w-full' : ''}`}>
                 <TradesDataCSV trades={trades} />

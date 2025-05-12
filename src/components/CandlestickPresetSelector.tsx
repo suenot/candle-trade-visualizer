@@ -1,9 +1,9 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { CANDLESTICK_PRESETS, PresetKey } from '../utils/candlestickUtils';
 import { Button } from './ui/button';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface CandlestickPresetSelectorProps {
   onSelectPreset: (preset: PresetKey) => void;
@@ -15,10 +15,11 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
   selectedPreset
 }) => {
   const isMobile = useIsMobile();
+  const { t } = useTranslation();
   
   return (
     <div className="flex flex-col space-y-4">
-      <h2 className="text-lg font-bold mb-2">Candlestick Presets</h2>
+      <h2 className="text-lg font-bold mb-2">{t('presets.title')}</h2>
       <div className={`flex flex-wrap gap-2 ${isMobile ? 'overflow-x-auto pb-2' : ''}`}>
         {Object.keys(CANDLESTICK_PRESETS).map((preset) => (
           <Button
@@ -37,7 +38,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
       
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="candlesticks">
-          <AccordionTrigger className="text-md font-semibold">What are Candlesticks?</AccordionTrigger>
+          <AccordionTrigger className="text-md font-semibold">{t('accordion.what')}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 text-sm">
               <p>
@@ -56,7 +57,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
         </AccordionItem>
         
         <AccordionItem value="structure">
-          <AccordionTrigger className="text-md font-semibold">Candle Structure</AccordionTrigger>
+          <AccordionTrigger className="text-md font-semibold">{t('accordion.structure')}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 text-sm">
               <p>
@@ -74,7 +75,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
         </AccordionItem>
         
         <AccordionItem value="timeframes">
-          <AccordionTrigger className="text-md font-semibold">Timeframes</AccordionTrigger>
+          <AccordionTrigger className="text-md font-semibold">{t('accordion.timeframes')}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 text-sm">
               <p>
@@ -96,7 +97,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
         </AccordionItem>
         
         <AccordionItem value="patterns">
-          <AccordionTrigger className="text-md font-semibold">Common Candlestick Patterns</AccordionTrigger>
+          <AccordionTrigger className="text-md font-semibold">{t('accordion.patterns')}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 text-sm">
               <p>
@@ -115,7 +116,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
         </AccordionItem>
         
         <AccordionItem value="advanced-concepts">
-          <AccordionTrigger className="text-md font-semibold">Advanced Concepts</AccordionTrigger>
+          <AccordionTrigger className="text-md font-semibold">{t('accordion.advanced')}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 text-sm">
               <h4 className="font-semibold">Trading Volume</h4>

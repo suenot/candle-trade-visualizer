@@ -1,0 +1,16 @@
+
+{
+  "page.title": "OHLCV 캔들스틱 데모",
+  "page.subtitle": "개별 거래에서 캔들스틱이 어떻게 형성되는지 알아보기",
+  "presets.title": "캔들스틱 프리셋",
+  "candle.data": "캔들스틱 데이터",
+  "trades.title": "개별 거래",
+  "trades.description": "이것은 OHLCV 캔들스틱을 형성하는 10개의 개별 거래입니다. 첫 번째 거래는 시가이고 마지막 거래는 종가입니다.",
+  "button.regenerate": "데이터 재생성",
+  "accordion.what": "캔들스틱이란?",
+  "accordion.structure": "캔들 구조",
+  "accordion.timeframes": "시간 프레임",
+  "accordion.patterns": "일반적인 캔들스틱 패턴",
+  "accordion.advanced": "고급 개념",
+  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+}

@@ -1,0 +1,16 @@
+
+{
+  "page.title": "OHLCV ローソク足デモ",
+  "page.subtitle": "個々の取引からローソク足がどのように形成されるかを学ぶ",
+  "presets.title": "ローソク足プリセット",
+  "candle.data": "ローソク足データ",
+  "trades.title": "個別取引",
+  "trades.description": "これらは OHLCV ローソク足を形成する 10 件の個別取引です。最初の取引は始値で、最後の取引は終値です。",
+  "button.regenerate": "データを再生成",
+  "accordion.what": "ローソク足とは？",
+  "accordion.structure": "ローソク足の構造",
+  "accordion.timeframes": "時間枠",
+  "accordion.patterns": "一般的なローソク足パターン",
+  "accordion.advanced": "高度な概念",
+  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+}

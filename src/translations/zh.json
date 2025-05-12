@@ -1,0 +1,16 @@
+
+{
+  "page.title": "OHLCV 蜡烛图演示",
+  "page.subtitle": "了解蜡烛图如何从个别交易形成",
+  "presets.title": "蜡烛图预设",
+  "candle.data": "蜡烛图数据",
+  "trades.title": "个别交易",
+  "trades.description": "这些是形成 OHLCV 蜡烛图的 10 笔个别交易。第一笔交易是开盘价，最后一笔交易是收盘价。",
+  "button.regenerate": "重新生成数据",
+  "accordion.what": "什么是蜡烛图？",
+  "accordion.structure": "蜡烛结构",
+  "accordion.timeframes": "时间周期",
+  "accordion.patterns": "常见蜡烛图形态",
+  "accordion.advanced": "高级概念",
+  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+}
