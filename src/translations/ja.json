@@ -1,4 +1,3 @@
-
 {
   "page.title": "OHLCV ローソク足デモ",
   "page.subtitle": "個々の取引からローソク足がどのように形成されるかを学ぶ",
@@ -12,5 +11,31 @@
   "accordion.timeframes": "時間枠",
   "accordion.patterns": "一般的なローソク足パターン",
   "accordion.advanced": "高度な概念",
-  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+  "footer.github": "GitHub: suenot/candle-trade-visualizer",
+  "preset.bullish.name": "強気ローソク足",
+  "preset.bullish.desc": "緑色のローソク足。終値が始値より高く、価格上昇を示す",
+  "preset.bearish.name": "弱気ローソク足",
+  "preset.bearish.desc": "赤色のローソク足。終値が始値より低く、価格下落を示す",
+  "preset.doji.name": "十字線（ドージ）",
+  "preset.doji.desc": "始値と終値がほぼ同じで、市場の迷いを示す",
+  "preset.hammer.name": "ハンマー",
+  "preset.hammer.desc": "小さな実体と長い下ヒゲ。多くは強気のシグナル",
+  "preset.shootingStar.name": "シューティングスター",
+  "preset.shootingStar.desc": "小さな実体と長い上ヒゲ。多くは弱気のシグナル",
+  "preset.engulfing.name": "強気包み足",
+  "preset.engulfing.desc": "強気ローソク足が前の弱気ローソク足を完全に包み込む",
+  "candle.chartTitle": "OHLCV ローソク足",
+  "candle.high": "高値",
+  "candle.low": "安値",
+  "candle.open": "始値",
+  "candle.close": "終値",
+  "candle.volume": "出来高",
+  "candle.timestamp": "タイムスタンプ",
+  "trades.data": "生成された取引データ (CSV)",
+  "trades.price": "価格",
+  "trades.side": "サイド",
+  "trades.buy": "買い",
+  "trades.sell": "売り",
+  "notfound.text": "おっと！ページが見つかりません",
+  "notfound.home": "ホームに戻る"
 }

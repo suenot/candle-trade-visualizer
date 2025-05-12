@@ -1,4 +1,3 @@
-
 {
   "page.title": "OHLCV 蜡烛图演示",
   "page.subtitle": "了解蜡烛图如何从个别交易形成",
@@ -12,5 +11,31 @@
   "accordion.timeframes": "时间周期",
   "accordion.patterns": "常见蜡烛图形态",
   "accordion.advanced": "高级概念",
-  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+  "footer.github": "GitHub: suenot/candle-trade-visualizer",
+  "preset.bullish.name": "多头蜡烛",
+  "preset.bullish.desc": "绿色蜡烛，收盘价高于开盘价，表示价格上涨",
+  "preset.bearish.name": "空头蜡烛",
+  "preset.bearish.desc": "红色蜡烛，收盘价低于开盘价，表示价格下跌",
+  "preset.doji.name": "十字星",
+  "preset.doji.desc": "开盘价和收盘价非常接近，显示市场犹豫",
+  "preset.hammer.name": "锤子线",
+  "preset.hammer.desc": "小实体和长下影线，通常为多头信号",
+  "preset.shootingStar.name": "射击之星",
+  "preset.shootingStar.desc": "小实体和长上影线，通常为空头信号",
+  "preset.engulfing.name": "多头吞没",
+  "preset.engulfing.desc": "多头蜡烛完全吞没前一根空头蜡烛",
+  "candle.chartTitle": "OHLCV 蜡烛图",
+  "candle.high": "最高价",
+  "candle.low": "最低价",
+  "candle.open": "开盘价",
+  "candle.close": "收盘价",
+  "candle.volume": "成交量",
+  "candle.timestamp": "时间戳",
+  "trades.data": "生成的交易数据 (CSV)",
+  "trades.price": "价格",
+  "trades.side": "方向",
+  "trades.buy": "买入",
+  "trades.sell": "卖出",
+  "notfound.text": "哎呀！页面未找到",
+  "notfound.home": "返回首页"
 }

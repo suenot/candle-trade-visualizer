@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { OHLCV, formatNumber } from '../utils/candlestickUtils';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface CandlestickVisualizationProps {
   candle: OHLCV;
@@ -10,6 +10,7 @@ const CandlestickVisualization: React.FC<CandlestickVisualizationProps> = ({ can
   const isBullish = candle.close > candle.open;
   const candleColor = isBullish ? 'bg-chart-up' : 'bg-chart-down';
   const wickColor = 'bg-chart-wick';
+  const { t } = useTranslation();
   
   // Calculate the range to determine visualization heights
   const priceRange = candle.high - candle.low;
@@ -20,27 +21,27 @@ const CandlestickVisualization: React.FC<CandlestickVisualizationProps> = ({ can
   
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-lg font-bold mb-8">OHLCV Candlestick</h2>
+      <h2 className="text-lg font-bold mb-8">{t('candle.chartTitle')}</h2>
       
       <div className="h-60 w-20 flex flex-col items-center justify-center relative">
         {/* Top price */}
         <div className="absolute -top-8 left-full ml-2 text-sm">
-          High: {formatNumber(candle.high)}
+          {t('candle.high')}: {formatNumber(candle.high)}
         </div>
         
         {/* Bottom price */}
         <div className="absolute -bottom-8 left-full ml-2 text-sm">
-          Low: {formatNumber(candle.low)}
+          {t('candle.low')}: {formatNumber(candle.low)}
         </div>
         
         {/* Open price */}
         <div className={`absolute text-xs left-full ml-2 ${isBullish ? 'top-[25%]' : 'bottom-[30%]'}`}>
-          Open: {formatNumber(candle.open)}
+          {t('candle.open')}: {formatNumber(candle.open)}
         </div>
         
         {/* Close price */}
         <div className={`absolute text-xs left-full ml-2 ${isBullish ? 'bottom-[25%]' : 'top-[30%]'}`}>
-          Close: {formatNumber(candle.close)}
+          {t('candle.close')}: {formatNumber(candle.close)}
         </div>
         
         {/* Upper wick */}
@@ -77,7 +78,7 @@ const CandlestickVisualization: React.FC<CandlestickVisualizationProps> = ({ can
       {/* Volume bar */}
       <div className="mt-4">
         <div className="h-4 bg-chart-volume" style={{ width: '50px' }}></div>
-        <div className="text-xs mt-1">Volume: {formatNumber(candle.volume, 0)}</div>
+        <div className="text-xs mt-1">{t('candle.volume')}: {formatNumber(candle.volume, 0)}</div>
       </div>
     </div>
   );

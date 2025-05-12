@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
-  CANDLESTICK_PRESETS, 
+  getCandlestickPresets, 
   PresetKey, 
   OHLCV, 
   Trade, 
@@ -19,10 +18,11 @@ import LanguageSelector from '../components/LanguageSelector';
 
 const Index = () => {
   const [selectedPreset, setSelectedPreset] = useState<PresetKey>('bullish');
+  const { t } = useTranslation();
+  const CANDLESTICK_PRESETS = getCandlestickPresets(t);
   const [candle, setCandle] = useState<OHLCV>(CANDLESTICK_PRESETS.bullish.generator());
   const [trades, setTrades] = useState<Trade[]>([]);
   const isMobile = useIsMobile();
-  const { t } = useTranslation();
 
   // Generate new candle and trades when preset changes
   useEffect(() => {
@@ -31,7 +31,7 @@ const Index = () => {
     
     setCandle(newCandle);
     setTrades(newTrades);
-  }, [selectedPreset]);
+  }, [selectedPreset, CANDLESTICK_PRESETS]);
 
   // Handle preset selection
   const handleSelectPreset = (preset: PresetKey) => {

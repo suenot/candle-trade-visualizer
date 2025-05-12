@@ -1,5 +1,5 @@
 import React from 'react';
-import { CANDLESTICK_PRESETS, PresetKey } from '../utils/candlestickUtils';
+import { getCandlestickPresets, PresetKey } from '../utils/candlestickUtils';
 import { Button } from './ui/button';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
@@ -16,6 +16,7 @@ const CandlestickPresetSelector: React.FC<CandlestickPresetSelectorProps> = ({
 }) => {
   const isMobile = useIsMobile();
   const { t } = useTranslation();
+  const CANDLESTICK_PRESETS = getCandlestickPresets(t);
   
   return (
     <div className="flex flex-col space-y-4">

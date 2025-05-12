@@ -1,3 +1,4 @@
+import { useTranslation } from '../contexts/LanguageContext';
 
 // Types for OHLCV data and trades
 export interface OHLCV {
@@ -17,10 +18,10 @@ export interface Trade {
 }
 
 // Preset candlestick patterns
-export const CANDLESTICK_PRESETS = {
+export const getCandlestickPresets = (t: (key: string) => string) => ({
   bullish: {
-    name: 'Bullish Candle',
-    description: 'A green candle showing price increase where close > open',
+    name: t('preset.bullish.name'),
+    description: t('preset.bullish.desc'),
     generator: (): OHLCV => {
       const open = 100;
       const close = 110;
@@ -38,8 +39,8 @@ export const CANDLESTICK_PRESETS = {
     }
   },
   bearish: {
-    name: 'Bearish Candle',
-    description: 'A red candle showing price decrease where close < open',
+    name: t('preset.bearish.name'),
+    description: t('preset.bearish.desc'),
     generator: (): OHLCV => {
       const open = 100;
       const close = 90;
@@ -57,8 +58,8 @@ export const CANDLESTICK_PRESETS = {
     }
   },
   doji: {
-    name: 'Doji',
-    description: 'Open and close prices are very close, showing indecision',
+    name: t('preset.doji.name'),
+    description: t('preset.doji.desc'),
     generator: (): OHLCV => {
       const open = 100;
       const close = 100 + (Math.random() * 0.4 - 0.2);
@@ -76,8 +77,8 @@ export const CANDLESTICK_PRESETS = {
     }
   },
   hammer: {
-    name: 'Hammer',
-    description: 'Small body with a long lower wick, often bullish',
+    name: t('preset.hammer.name'),
+    description: t('preset.hammer.desc'),
     generator: (): OHLCV => {
       const open = 100;
       const close = 101.5;
@@ -95,8 +96,8 @@ export const CANDLESTICK_PRESETS = {
     }
   },
   shootingStar: {
-    name: 'Shooting Star',
-    description: 'Small body with a long upper wick, often bearish',
+    name: t('preset.shootingStar.name'),
+    description: t('preset.shootingStar.desc'),
     generator: (): OHLCV => {
       const open = 100;
       const close = 98.5;
@@ -114,8 +115,8 @@ export const CANDLESTICK_PRESETS = {
     }
   },
   engulfing: {
-    name: 'Bullish Engulfing',
-    description: 'A bullish candle that completely engulfs the previous bearish candle',
+    name: t('preset.engulfing.name'),
+    description: t('preset.engulfing.desc'),
     generator: (): OHLCV => {
       const open = 95;
       const close = 105;
@@ -132,9 +133,9 @@ export const CANDLESTICK_PRESETS = {
       };
     }
   }
-};
+});
 
-export type PresetKey = keyof typeof CANDLESTICK_PRESETS;
+export type PresetKey = keyof ReturnType<typeof getCandlestickPresets>;
 
 // Generate trades based on OHLCV data
 export function generateTrades(candle: OHLCV): Trade[] {

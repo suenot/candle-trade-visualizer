@@ -1,4 +1,3 @@
-
 {
   "page.title": "Демо OHLCV свечей",
   "page.subtitle": "Узнайте, как формируются свечи из отдельных сделок",
@@ -12,5 +11,31 @@
   "accordion.timeframes": "Временные интервалы",
   "accordion.patterns": "Популярные паттерны свечей",
   "accordion.advanced": "Продвинутые концепции",
-  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+  "footer.github": "GitHub: suenot/candle-trade-visualizer",
+  "preset.bullish.name": "Бычья свеча",
+  "preset.bullish.desc": "Зелёная свеча, показывающая рост цены (close > open)",
+  "preset.bearish.name": "Медвежья свеча",
+  "preset.bearish.desc": "Красная свеча, показывающая падение цены (close < open)",
+  "preset.doji.name": "Доджи",
+  "preset.doji.desc": "Открытие и закрытие почти равны, нерешительность рынка",
+  "preset.hammer.name": "Молот",
+  "preset.hammer.desc": "Малое тело и длинная нижняя тень, часто бычий сигнал",
+  "preset.shootingStar.name": "Падающая звезда",
+  "preset.shootingStar.desc": "Малое тело и длинная верхняя тень, часто медвежий сигнал",
+  "preset.engulfing.name": "Бычье поглощение",
+  "preset.engulfing.desc": "Бычья свеча полностью поглощает предыдущую медвежью",
+  "candle.chartTitle": "OHLCV Свеча",
+  "candle.high": "Максимум",
+  "candle.low": "Минимум",
+  "candle.open": "Открытие",
+  "candle.close": "Закрытие",
+  "candle.volume": "Объём",
+  "candle.timestamp": "Время",
+  "trades.data": "Сделки, формирующие свечу (CSV)",
+  "trades.price": "Цена",
+  "trades.side": "Сторона",
+  "trades.buy": "ПОКУПКА",
+  "trades.sell": "ПРОДАЖА",
+  "notfound.text": "Ой! Страница не найдена",
+  "notfound.home": "Вернуться на главную"
 }

@@ -1,4 +1,3 @@
-
 {
   "page.title": "OHLCV Candlestick Demo",
   "page.subtitle": "Learn how candlesticks are formed from individual trades",
@@ -12,5 +11,31 @@
   "accordion.timeframes": "Timeframes",
   "accordion.patterns": "Common Candlestick Patterns",
   "accordion.advanced": "Advanced Concepts",
-  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+  "footer.github": "GitHub: suenot/candle-trade-visualizer",
+  "preset.bullish.name": "Bullish Candle",
+  "preset.bullish.desc": "A green candle showing price increase where close > open",
+  "preset.bearish.name": "Bearish Candle",
+  "preset.bearish.desc": "A red candle showing price decrease where close < open",
+  "preset.doji.name": "Doji",
+  "preset.doji.desc": "Open and close prices are very close, showing indecision",
+  "preset.hammer.name": "Hammer",
+  "preset.hammer.desc": "Small body with a long lower wick, often bullish",
+  "preset.shootingStar.name": "Shooting Star",
+  "preset.shootingStar.desc": "Small body with a long upper wick, often bearish",
+  "preset.engulfing.name": "Bullish Engulfing",
+  "preset.engulfing.desc": "A bullish candle that completely engulfs the previous bearish candle",
+  "candle.chartTitle": "OHLCV Candlestick",
+  "candle.high": "High",
+  "candle.low": "Low",
+  "candle.open": "Open",
+  "candle.close": "Close",
+  "candle.volume": "Volume",
+  "candle.timestamp": "Timestamp",
+  "trades.data": "Generated Trades Data (CSV)",
+  "trades.price": "Price",
+  "trades.side": "Side",
+  "trades.buy": "BUY",
+  "trades.sell": "SELL",
+  "notfound.text": "Oops! Page not found",
+  "notfound.home": "Return to Home"
 }

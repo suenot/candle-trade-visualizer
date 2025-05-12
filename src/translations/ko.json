@@ -1,4 +1,3 @@
-
 {
   "page.title": "OHLCV 캔들스틱 데모",
   "page.subtitle": "개별 거래에서 캔들스틱이 어떻게 형성되는지 알아보기",
@@ -12,5 +11,31 @@
   "accordion.timeframes": "시간 프레임",
   "accordion.patterns": "일반적인 캔들스틱 패턴",
   "accordion.advanced": "고급 개념",
-  "footer.github": "GitHub: suenot/candle-trade-visualizer"
+  "footer.github": "GitHub: suenot/candle-trade-visualizer",
+  "preset.bullish.name": "강세 캔들",
+  "preset.bullish.desc": "녹색 캔들, 종가가 시가보다 높아 가격 상승을 의미",
+  "preset.bearish.name": "약세 캔들",
+  "preset.bearish.desc": "빨간색 캔들, 종가가 시가보다 낮아 가격 하락을 의미",
+  "preset.doji.name": "도지",
+  "preset.doji.desc": "시가와 종가가 거의 같아 시장의 망설임을 나타냄",
+  "preset.hammer.name": "해머",
+  "preset.hammer.desc": "작은 몸통과 긴 아래꼬리, 주로 강세 신호",
+  "preset.shootingStar.name": "슈팅스타",
+  "preset.shootingStar.desc": "작은 몸통과 긴 윗꼬리, 주로 약세 신호",
+  "preset.engulfing.name": "강세 엔골핑",
+  "preset.engulfing.desc": "강세 캔들이 이전 약세 캔들을 완전히 감쌈",
+  "candle.chartTitle": "OHLCV 캔들스틱",
+  "candle.high": "최고가",
+  "candle.low": "최저가",
+  "candle.open": "시가",
+  "candle.close": "종가",
+  "candle.volume": "거래량",
+  "candle.timestamp": "타임스탬프",
+  "trades.data": "생성된 거래 데이터 (CSV)",
+  "trades.price": "가격",
+  "trades.side": "구분",
+  "trades.buy": "매수",
+  "trades.sell": "매도",
+  "notfound.text": "이런! 페이지를 찾을 수 없습니다",
+  "notfound.home": "홈으로 돌아가기"
 }

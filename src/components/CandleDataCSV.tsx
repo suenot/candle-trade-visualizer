@@ -1,25 +1,26 @@
-
 import React from 'react';
 import { OHLCV, formatNumber, formatDate } from '../utils/candlestickUtils';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface CandleDataCSVProps {
   candle: OHLCV;
 }
 
 const CandleDataCSV: React.FC<CandleDataCSVProps> = ({ candle }) => {
+  const { t } = useTranslation();
   return (
     <div className="mt-4">
-      <h3 className="text-lg font-bold mb-2">Candlestick Data (CSV)</h3>
+      <h3 className="text-lg font-bold mb-2">{t('candle.data')}</h3>
       <div className="overflow-x-auto max-w-full">
         <table className="min-w-full bg-card border border-border rounded-md">
           <thead>
             <tr className="bg-muted">
-              <th className="px-4 py-2 text-left">Timestamp</th>
-              <th className="px-4 py-2 text-left">Open</th>
-              <th className="px-4 py-2 text-left">High</th>
-              <th className="px-4 py-2 text-left">Low</th>
-              <th className="px-4 py-2 text-left">Close</th>
-              <th className="px-4 py-2 text-left">Volume</th>
+              <th className="px-4 py-2 text-left">{t('candle.timestamp')}</th>
+              <th className="px-4 py-2 text-left">{t('candle.open')}</th>
+              <th className="px-4 py-2 text-left">{t('candle.high')}</th>
+              <th className="px-4 py-2 text-left">{t('candle.low')}</th>
+              <th className="px-4 py-2 text-left">{t('candle.close')}</th>
+              <th className="px-4 py-2 text-left">{t('candle.volume')}</th>
             </tr>
           </thead>
           <tbody>
