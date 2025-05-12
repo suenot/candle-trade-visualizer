@@ -20,7 +20,7 @@ const CandlestickVisualization: React.FC<CandlestickVisualizationProps> = ({ can
   
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-lg font-bold mb-4">OHLCV Candlestick</h2>
+      <h2 className="text-lg font-bold mb-8">OHLCV Candlestick</h2>
       
       <div className="h-60 w-20 flex flex-col items-center justify-center relative">
         {/* Top price */}

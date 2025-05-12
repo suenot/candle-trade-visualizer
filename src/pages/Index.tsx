@@ -13,11 +13,13 @@ import CandlestickPresetSelector from '../components/CandlestickPresetSelector';
 import CandlestickVisualization from '../components/CandlestickVisualization';
 import CandleDataCSV from '../components/CandleDataCSV';
 import TradesDataCSV from '../components/TradesDataCSV';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Index = () => {
   const [selectedPreset, setSelectedPreset] = useState<PresetKey>('bullish');
   const [candle, setCandle] = useState<OHLCV>(CANDLESTICK_PRESETS.bullish.generator());
   const [trades, setTrades] = useState<Trade[]>([]);
+  const isMobile = useIsMobile();
 
   // Generate new candle and trades when preset changes
   useEffect(() => {
@@ -59,11 +61,15 @@ const Index = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Left side: Candlestick visualization */}
         <Card>
-          <CardContent className="p-6">
+          <CardContent className={`p-6 ${isMobile ? 'overflow-x-auto' : ''}`}>
             <div className="flex flex-col items-center">
-              <CandlestickVisualization candle={candle} />
+              <div className={`${isMobile ? 'min-w-[300px]' : ''}`}>
+                <CandlestickVisualization candle={candle} />
+              </div>
               <Separator className="my-6" />
-              <CandleDataCSV candle={candle} />
+              <div className={`${isMobile ? 'overflow-x-auto w-full' : ''}`}>
+                <CandleDataCSV candle={candle} />
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -85,7 +91,9 @@ const Index = () => {
                 These are the 10 individual trades that form the OHLCV candlestick. 
                 The first trade is at the open price, and the last trade is at the close price.
               </p>
-              <TradesDataCSV trades={trades} />
+              <div className={`${isMobile ? 'overflow-x-auto w-full' : ''}`}>
+                <TradesDataCSV trades={trades} />
+              </div>
             </div>
           </CardContent>
         </Card>
